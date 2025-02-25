@@ -6,14 +6,14 @@
 # 1. podnaloga
 # Vpišite vrednost produkta števil $123456789$ in $987654321$.
 # =============================================================================
-
+121932631112635269
 # =====================================================================@000911=
 # 2. podnaloga
 # Vpišite na vsaj deset decimalk natančno izračunano vrednost $\sin(e)$, kjer
 # je $e$ osnova naravnega logaritma. Pri tem boste po potrebi v konzoli morali
 # naložiti knjižnico `math`.
 # =============================================================================
-
+0.41078129050290885
 # =====================================================================@000912=
 # 3. podnaloga
 # Vpišite izraz, katerega vrednost je enaka $1 + 2 + 3 + 4 + 5$.

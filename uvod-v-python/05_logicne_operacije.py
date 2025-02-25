@@ -32,7 +32,8 @@
 # `a` in `b` ter vrne logično vrednost disjunkcije `a \/ b`. Pri tem si
 # pomagajte z vgrajenim operatorjem `or`.
 # =============================================================================
-
+def disjunkcija(a, b):
+    return a or b
 # =====================================================================@000920=
 # 2. podnaloga
 # Logični operator *negacija* ima naslednjo resničnostno tabelo:
@@ -44,7 +45,8 @@
 # 
 # Sestavite funkcijo `negacija(a)`, ki vrne logično vrednost negacije `~a`.
 # =============================================================================
-
+def negacija(a):
+    return not a
 # =====================================================================@000915=
 # 3. podnaloga
 # Logični operator *implikacija* ima naslednjo resničnostno tabelo:
@@ -59,7 +61,11 @@
 # Sestavite funkcijo `implikacija(a, b)`, ki vrne logično vrednost
 # implikacije `a => b`.
 # =============================================================================
-
+def implikacija(a, b):
+    if a == True and b == False:
+        return False
+    else:
+        return True
 # =====================================================================@000916=
 # 4. podnaloga
 # Logični operator *ekvivalenca* ima naslednjo resničnostno tabelo:
@@ -76,7 +82,11 @@
 # 
 # Namig: Pomagajte si lahko s funkcijo `implikacija`.
 # =============================================================================
-
+def ekvivalenca(a, b):
+    if a == b:
+        return True
+    else:
+        return False
 # =====================================================================@000917=
 # 5. podnaloga
 # Logični operator *ekskluzivni ali* (*exclusive or* ali XOR) ima naslednjo
@@ -91,7 +101,11 @@
 # 
 # Sestavite funkcijo `xor(a, b)`, ki vrne logično vrednost `a XOR b`.
 # =============================================================================
-
+def xor(a, b):
+    if a == b:
+        return False
+    else:
+        return True
 # =====================================================================@000918=
 # 6. podnaloga
 # Logični operator *NAND* (*not and*) ima naslednjo
@@ -106,7 +120,11 @@
 # 
 # Sestavite funkcijo `nand(a, b)`, ki vrne logično vrednost `a NAND b`.
 # =============================================================================
-
+def nand(a, b):
+    if a == b == True:
+        return False
+    else:
+        return True
 # =====================================================================@000919=
 # 7. podnaloga
 # Operator NAND je prav poseben, saj z njim lahko izrazimo vse osnovne logične
@@ -118,6 +136,12 @@
 # uporabiti vgrajenih logičnih operacij ali poprej definiranih funkcij.
 # Namesto tega uporabite funkcijo `nand`.
 # =============================================================================
+def negacija_nand(a, b):
+    if a == b == True:
+        return True
+    else:
+        return False
+    
 
 
 

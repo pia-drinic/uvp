@@ -5,13 +5,29 @@
 # Sestavite funkcijo `je_prestopno(leto)`, ki vrne `True`, kadar je `leto`
 # prestopno, in `False`, kadar ni.
 # =============================================================================
-
+def je_prestopno(leto):
+    if leto % 4 == 0 and leto % 100 != 0:
+        return True
+    elif leto % 100 == 0 and leto % 400 != 0:
+        return False
+    elif leto % 400 == 0:
+        return True
+    else: 
+        return False
 # =====================================================================@000928=
 # 2. podnaloga
 # Sestavite funkcijo `stevilo_dni(mesec, leto)`, ki vrne število dni danega
 # meseca (podanega s številom med 1 in 12) v danem letu.
 # =============================================================================
-
+def stevilo_dni(mesec, leto):
+    if mesec in [1, 3, 5, 7, 8, 10, 12]:
+        return 31
+    elif mesec in [4, 6, 9, 11]:
+        return 30
+    elif mesec == 2 and je_prestopno(leto) == False:
+        return 28
+    else:
+        return 29
 # =====================================================================@000929=
 # 3. podnaloga
 # Sestavite funkcijo `je_veljaven_datum(dan, mesec, leto)`, ki vrne `True`
@@ -19,7 +35,11 @@
 # (torej `mesec` mora biti število med 1 in 12, `dan` pa mora ustrezati dnevu
 # v tem mesecu).
 # =============================================================================
-
+def je_veljaven_datum(dan, mesec, leto):
+    if 1 <= mesec <= 12 and 1 <= dan <= stevilo_dni(mesec, leto):
+        return True
+    else: 
+        return False
 
 
 

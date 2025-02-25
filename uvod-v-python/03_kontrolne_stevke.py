@@ -8,7 +8,11 @@
 #     >>> vsota_kvadratov_stevk(123)
 #     14
 # =============================================================================
-
+def vsota_kvadratov_stevk(n):
+    enice = n % 10
+    desetice = n // 10 % 10
+    stotice = n // 100
+    return enice ** 2 + desetice ** 2 + stotice ** 2
 # =====================================================================@000925=
 # 2. podnaloga
 # Sestavite funkcijo `obrat(n)`, ki vrne število, ki ga dobimo, če tromestnemu
@@ -17,7 +21,11 @@
 #     >>> obrat(123)
 #     321
 # =============================================================================
-
+def obrat(n):
+    enice = n % 10
+    desetice = n // 10 % 10
+    stotice = n // 100 
+    return enice * 100 + desetice * 10 + stotice
 # =====================================================================@000926=
 # 3. podnaloga
 # Da bi pri obdelavi podatkov lahko prepoznali morebitne napake, številske
@@ -41,7 +49,27 @@
 #     >>> dodaj_kontrolno_stevko(265195368523)
 #     2651953685235
 # =============================================================================
+def dodaj_kontrolno_stevko(sklic):
+    s1 = sklic % 10
+    s2 = sklic // 10 % 10
+    s3 = sklic // 100 % 10
+    s4 = sklic // 1000 % 10
+    s5 = sklic // 10000 % 10
+    s6 = sklic // 100000 % 10
+    s7 = sklic // 1000000 % 10
+    s8 = sklic // 10000000 % 10
+    s9 = sklic // 100000000 % 10
+    s10 = sklic // 1000000000 % 10
+    s11 = sklic // 10000000000 % 10
+    s12 = sklic // 100000000000 % 10
+    a = s1 * 2 + s2 * 3 + s3 * 4 + s4 * 5 + s5 * 6 + s6 * 7 + s7 * 8 + s8 * 9 + s9 * 10 + s10 * 11 + s11 * 12 + s12 * 13
+    ost = a % 11
+    kontrolna = 11 - ost
 
+    if kontrolna < 10:
+        return sklic * 10 + kontrolna
+    else: 
+        return sklic * 10
 
 
 
