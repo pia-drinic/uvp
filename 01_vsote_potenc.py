@@ -4,20 +4,32 @@
 # 1. podnaloga
 # Sestavite funkcijo `vsota_prvih(n)`, ki vrne vsoto prvih `n` naravnih števil.
 # =============================================================================
-
+def vsota_prvih(n):
+    vsota = 0
+    for a in range (1, n + 1):
+        vsota += a
+    return vsota
 # =====================================================================@000954=
 # 2. podnaloga
 # Sestavite funkcijo `vsota_prvih_kvadratov(n)`, ki vrne vsoto kvadratov
 # prvih `n` naravnih števil.
 # =============================================================================
-
+def vsota_prvih_kvadratov(n):
+    vsota = 0
+    for i in range (1, n + 1):
+        vsota += (i ** 2)
+    return vsota
 # =====================================================================@000955=
 # 3. podnaloga
 # Sestavite funkcijo `vsota_prvih_potenc(n, k)`, ki vrne vsoto `k`-tih potenc
 # prvih `n` naravnih števil. Argument `k` naj bo neobvezen in naj ima privzeto
 # vrednost `1`.
 # =============================================================================
-
+def vsota_prvih_potenc(n, k = 1):
+    vsota = 0
+    for i in range (1, n + 1):
+        vsota += i ** k
+    return vsota
 
 
 
