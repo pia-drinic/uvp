@@ -4,28 +4,62 @@
 # 1. podnaloga
 # Sestavite funkcijo `vsota_stevk(n)`, ki vrne vsoto števk števila `n`.
 # =============================================================================
-
+def vsota_stevk(n):
+    numbers = []
+    numbers_items = str(n)
+    for i in numbers_items:
+        numbers.append(i)
+    vsota = 0
+    for k in numbers:
+        vsota += int(k)
+    return vsota
 # =====================================================================@000957=
 # 2. podnaloga
 # Sestavite funkcijo `vsota_vecjih_stevk(n, k)`, ki vrne vsoto tistih števk
 # števila `n`, ki so večje ali enake `k`. Če parametra `k` ne podamo, naj
 # funkcija vrne vsoto vseh števk števila `n`.
 # =============================================================================
-
+def vsota_vecjih_stevk(n, k = 0):
+    vsota = 0
+    stevke = str(n)
+    for a in stevke:
+        b = int(a)
+        if b >= k:
+            vsota += b
+    return vsota
 # =====================================================================@000958=
 # 3. podnaloga
 # Sestavite funkcijo `vsota_stevk_stevil_med(m, n)`, ki vrne vsoto števk
 # vseh števil med vključno `m` in `n`.
 # =============================================================================
-
+def vsota_stevk_stevil_med(m, n):
+    vsota = 0
+    for i in range(m, n + 1):
+        stevke = str(i)
+        for a in stevke:
+            vsota += int(a)
+    return vsota
 # =====================================================================@000959=
 # 4. podnaloga
 # Sestavite **učinkovito** funkcijo `najmanjse_stevilo_z_vsoto_stevk(n)`,
 # ki izračuna točno to, kar piše v njenem imenu.
 # =============================================================================
-
-
-
+def najmanjse_stevilo_z_vsoto_stevk(n):
+    vsota = 0
+    if n == 0:
+        return 0
+    elif n < 10:
+        vsota += n
+    elif n > 9:
+        stevke = str(n)
+        numbers = []
+        for i in stevke:
+            numbers.append(i)
+            for a in numbers:
+                vsota += int(a)
+            return vsota
+    else:
+        return -1
 
 
 
