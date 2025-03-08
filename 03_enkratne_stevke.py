@@ -10,7 +10,15 @@
 #     >>> kolikokrat_se_pojavi_stevka(1, 1)
 #     1
 # =============================================================================
-
+def kolikokrat_se_pojavi_stevka(k, n):
+    vsota = 0
+    stevke = str(n)
+    for i in stevke:
+        if i == k:
+            vsota += int(i)
+            return vsota
+        else: 
+            return 0
 # =====================================================================@020026=
 # 2. podnaloga
 # Napišite funkcijo `ali_ima_enkratne_stevke(n)`, ki preveri, ali se v celem
