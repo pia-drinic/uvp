@@ -45,21 +45,7 @@ def vsota_stevk_stevil_med(m, n):
 # ki izračuna točno to, kar piše v njenem imenu.
 # =============================================================================
 def najmanjse_stevilo_z_vsoto_stevk(n):
-    vsota = 0
-    if n == 0:
-        return 0
-    elif n < 10:
-        vsota += n
-    elif n > 9:
-        stevke = str(n)
-        numbers = []
-        for i in stevke:
-            numbers.append(i)
-            for a in numbers:
-                vsota += int(a)
-            return vsota
-    else:
-        return -1
+    return (n % 9 + 1) * 10 ** (n // 9) - 1
 
 
 
