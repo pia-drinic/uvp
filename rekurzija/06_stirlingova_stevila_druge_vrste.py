@@ -22,7 +22,13 @@
 #     >>> stirling(10,3)
 #     9330
 # =============================================================================
-
+def stirling(n, k):
+    if n == k == 0:
+        return 1
+    elif n == 0 and k != 0 or n != 0 and k == 0:
+        return 0
+    else: 
+        return (k * stirling(n - 1, k) + stirling(n - 1, k - 1))
 # =====================================================================@020024=
 # 2. podnaloga
 # Stirlingova števila druge vrste lahko računamo tudi po naslednji direktni
