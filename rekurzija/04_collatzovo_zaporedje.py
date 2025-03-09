@@ -47,9 +47,13 @@ def najvecji_clen(n):
 # zaporedja med vsemi tistimi Collatzovimi zaporedji, ki se začnejo s števili
 # med (vključno) `m` in `n`.
 # =============================================================================
-
-    
-
+def najdaljse_zaporedje(m, n):
+    najdaljse = 0
+    for i in range (m, n + 1):
+        dolzina = dolzina_zaporedja(i)
+        if dolzina > najdaljse:
+            najdaljse = dolzina
+    return najdaljse
 
 
 
