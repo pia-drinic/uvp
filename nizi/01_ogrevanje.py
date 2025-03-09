@@ -11,10 +11,17 @@
 #     >>> ima_samoglasnike("čmrlj")
 #     False
 # =============================================================================
-
+def ima_samoglasnike(input):
+    beseda = input.lower()
+    samoglasniki = ["a", "e", "i", "o", "u"]
+    for i in samoglasniki:
+        if i in beseda:
+            return True
+    else:
+        return False
 # =====================================================================@027480=
 # 2. podnaloga
-# Sestavite funkcijo `skoraj_enaka`, ki spreje dva niza in preveri, ali sta niza
+# Sestavite funkcijo `skoraj_enaka`, ki sprejme dva niza in preveri, ali sta niza
 # enaka, če ne ločimo velikih in malih črk.
 # 
 # 
@@ -23,7 +30,13 @@
 #     >>> skoraj_enaka("Čuden NiZ", "čUDen niZ")
 #     True
 # =============================================================================
-
+def skoraj_enaka(input1, input2):
+    niz1 = input1.lower()
+    niz2 = input2.lower()
+    if niz1 == niz2:
+        return True
+    else:
+        return False
 # =====================================================================@027481=
 # 3. podnaloga
 # Sestavite funkcijo `zamenjaj`, ki spreje dva niza in vrne prvi niz, kjer je
