@@ -12,13 +12,12 @@
 # =============================================================================
 def kolikokrat_se_pojavi_stevka(k, n):
     vsota = 0
-    stevke = str(n)
-    for i in stevke:
-        if i == k:
-            vsota += int(i)
-            return vsota
-        else: 
-            return 0
+    stevke_n = str(n)
+    stevka_k = str(k)
+    for a in stevke_n:
+        if a == stevka_k:
+            vsota += 1
+    return vsota
 # =====================================================================@020026=
 # 2. podnaloga
 # Napišite funkcijo `ali_ima_enkratne_stevke(n)`, ki preveri, ali se v celem
@@ -29,7 +28,12 @@ def kolikokrat_se_pojavi_stevka(k, n):
 #     >>> ali_ima_enkratne_stevke(80085)
 #     False
 # =============================================================================
-
+def ali_ima_enkratne_stevke(n):
+    stevke_n = str(n)
+    for a in range(10):
+        if kolikokrat_se_pojavi_stevka(a, n) > 1 and str(a) in stevke_n:
+            return False
+    return True
 
 
 
