@@ -49,7 +49,12 @@ def skoraj_enaka(input1, input2):
 #     >>> zamenjaj("abeceda", "")
 #     "abeceda"
 # =============================================================================
-
+def zamenjaj(x, y):
+    input1 = str(x)
+    input2 = str(y)
+    if input2:
+        return input1[0:-1] + input2[-1]
+    return input1
 # =====================================================================@027482=
 # 4. podnaloga
 # Sestavite funkcijo `zlij`, ki sprejme dva niza in vrne nov niz, kjer se
@@ -63,20 +68,19 @@ def skoraj_enaka(input1, input2):
 #     >>> zlij("AAAAA", "BBB")
 #     "ABABABAA"
 # =============================================================================
+def zlij(x, y):
+    rezultat = ""
+    dolzina1 = len(x)
+    dolzina2 = len(y)
+    krajsi_niz = min(dolzina1, dolzina2)
+    for i in range(krajsi_niz):
+        rezultat += x[i] + y[i]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if dolzina1 > dolzina2:
+        rezultat += x[krajsi_niz:]
+    elif dolzina2 > dolzina1:
+        rezultat += y[krajsi_niz:]
+    return rezultat
 
 
 
